@@ -4,21 +4,23 @@
   box-sizing: border-box; }
 
 body {
-  height: 100vh;
+  position: relative;
   font-family: 'Roboto', sans-serif; }
 
 .navbar {
-  background-image: linear-gradient(#313183, #201d49); }
+  background-image: linear-gradient(#313183, #201d49);
+  z-index: 5; }
   .navbar .fixed {
     position: absolute;
     top: 0;
-    background-color: #fff;
     padding: 10px;
+    background-color: #fff;
     box-shadow: 1px 5px 5px #ddd;
     z-index: 1; }
     .navbar .fixed img {
       height: 120px; }
   .navbar-nav a {
+    font-size: 20px;
     color: white; }
   .navbar .collapse {
     padding-top: 10px; }
@@ -28,10 +30,17 @@ body {
       margin-left: 10px; }
 
 .form-inline {
-  z-index: 5;
   position: absolute;
-  top: 10px;
-  right: 10px; }
+  top: 20px;
+  right: 10px;
+  z-index: 5; }
+  .form-inline .form-control {
+    width: 150px; }
+  .form-inline a img {
+    margin-left: 10px; }
+
+.active {
+  opacity: 0; }
 
 .container .about {
   display: flex;
@@ -41,11 +50,86 @@ body {
   padding-bottom: 50px; }
   .container .about span {
     font-size: 30px;
+    margin-left: 25px;
     letter-spacing: 1px;
-    line-height: 74px;
-    margin-left: 25px; }
+    line-height: 74px; }
+
+.container .font {
+  font-size: 14px;
+  margin-top: 30px; }
+  .container .font .col-6 img {
+    width: 100%;
+    height: 350px;
+    margin: 20px 0; }
+  .container .font .col-6 p {
+    text-align: justify; }
+  .container .font .second {
+    margin-top: 13px; }
 
 .left-menu {
   position: absolute;
+  top: 0;
   left: 0;
-  top: 100px; }
+  display: flex;
+  transition: .2s linear; }
+  .left-menu .menu-content {
+    padding: 120px 0 0 35px;
+    z-index: 5; }
+    .left-menu .menu-content li {
+      margin: 7px 0;
+      list-style: none;
+      cursor: pointer; }
+      .left-menu .menu-content li a {
+        color: #023a5c;
+        text-decoration: none; }
+      .left-menu .menu-content li.underline {
+        border-bottom: 2px dotted #023a5c;
+        padding-bottom: 20px;
+        margin-bottom: 25px; }
+    .left-menu .menu-content .socials .fb {
+      margin-bottom: 20px; }
+    .left-menu .menu-content .socials .fb,
+    .left-menu .menu-content .socials .in {
+      cursor: pointer; }
+  .left-menu .hide {
+    position: absolute;
+    left: 100px;
+    height: 100%;
+    width: 90px;
+    box-shadow: 10px 0 5px -10px #c4c1c1; }
+    .left-menu .hide img {
+      position: absolute;
+      top: 36.5%;
+      margin-left: 55px;
+      padding: 5px; }
+    .left-menu .hide .text {
+      position: absolute;
+      top: 38.5%;
+      margin-left: 45px;
+      font-size: 15px;
+      color: #023a5c; }
+
+footer {
+  position: relative;
+  height: 50px;
+  background-image: linear-gradient(#313183, #201d49);
+  margin-top: 50px; }
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 900px;
+    padding-left: 150px; }
+  .navbar .fixed img {
+    height: 100px; }
+  .navbar-nav a {
+    font-size: 17px; }
+  .navbar .collapse .navbar-nav .nav-item {
+    margin-left: 5px; }
+  .navbar .collapse .navbar-nav .form-inline img {
+    margin-left: 10px; }
+  .form-inline .form-control {
+    height: 35px; }
+  .form-inline a img {
+    height: 25px; }
+  .container .about span {
+    font-size: 25px; } }

@@ -1,0 +1,43 @@
+@media(max-width: 1600px) {
+
+    .container {
+        max-width: 900px;
+        padding-left: 150px;
+    }
+
+    .navbar {
+        & .fixed img {
+            height: 100px;
+        }
+
+        &-nav a {
+            font-size: 17px;
+        }
+
+        & .collapse {
+            & .navbar-nav {
+                & .nav-item {
+                    margin-left: 5px;
+                }
+
+                & .form-inline img {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .form-inline {
+        & .form-control {
+            height: 35px;
+        }
+
+        & a img {
+            height: 25px;
+        }
+    }
+
+    .container .about span {
+        font-size: 25px;
+    }
+}
